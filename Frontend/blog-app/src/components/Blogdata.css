@@ -1,0 +1,82 @@
+/* Blogdata.css */
+
+
+.blog-data-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    overflow-y: scroll;
+    max-height: calc(100vh - 40px);
+  }
+  .hii{
+    background-image: url("https://www.shutterstock.com/shutterstock/photos/2212191223/display_1500/stock-photo--d-render-of-beautiful-digital-metaverse-virtual-reality-world-with-user-avatars-buildings-2212191223.jpg");
+}
+  
+  .blog-item {
+    flex: 0 0 calc(50% - 20px);
+    display: flex;
+    flex-direction: column;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .blog-item:hover {
+    transform: translateY(-5px);
+  }
+  
+  .blog-content {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%; /* Ensures that the content doesn't exceed the container height */
+    overflow-y: auto; /* Enables vertical scrolling when the content exceeds the container height */
+  }
+  
+  .blog-content h3 {
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+  
+  .blog-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+  
+  /* Edit and Delete buttons */
+  .blog-content button {
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+  }
+  
+  .blog-content button.edit-button {
+    background-color: #0074d9;
+    color: #fff;
+    transition: background-color 0.2s ease;
+  }
+  
+  .blog-content button.edit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .blog-content button.delete-button {
+    background-color: #ff4136;
+    color: #fff;
+    transition: background-color 0.2s ease;
+  }
+  
+  .blog-content button.delete-button:hover {
+    background-color: #e33e36;
+  }
+  
