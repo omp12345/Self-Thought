@@ -16,7 +16,7 @@ function Navbar() {
         </li>
         <li>
           
-          {token? <Link to="/blog">Blog</Link>:<Link to="/login">login</Link>}
+         <Link to="/blog">Blog</Link>
           
         </li>
       </ul>
