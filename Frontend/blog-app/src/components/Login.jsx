@@ -7,10 +7,9 @@ import UserBlog from './UserBlog';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [loginemail, setLoginemail] = useState(null);
-  const [loginpass, setLoginpass] = useState(null);
+ 
   const [alertMessage, setAlertMessage] = useState('');
-  const [status,setStatus]=useState(false)
+  
   // State for alert message
   
   const Navigate = useNavigate();
@@ -30,10 +29,8 @@ function Login() {
       axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/login", obj)
         .then((res) => {
           const token = res.data.token;
-          const data = res.data.logindata;
-          console.log(data);
-          setLoginemail(data.email);
-          setLoginpass(data.password);
+          
+         
           
           if (token) {
             localStorage.setItem("token", res.data.token);
@@ -50,7 +47,7 @@ function Login() {
       setAlertMessage('Wrong Credentials. Please check your email and password.');
     }
   };
-  setStatus(false)
+ 
 
   const handleclick = () => {
     Navigate('/register');
