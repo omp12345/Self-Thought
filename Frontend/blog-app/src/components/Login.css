@@ -1,68 +1,86 @@
 /* Login.css */
-
 body {
-    background-image: url("https://img.freepik.com/free-photo/galactic-night-sky-astronomy-science-combined-generative-ai_188544-9656.jpg?w=996&t=st=1697394186~exp=1697394786~hmac=724575b4269370706bf2988bcee4e24fd94b6d5a6152afa9878a76effe93dc93");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    animation: moveBackground 20s linear infinite;
-  }
-  
+  background-image: url("https://img.freepik.com/free-photo/galactic-night-sky-astronomy-science-combined-generative-ai_188544-9656.jpg?w=996&t=st=1697394186~exp=1697394786~hmac=724575b4269370706bf2988bcee4e24fd94b6d5a6152afa9878a76effe93dc93");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: moveBackground 20s linear infinite;
+}
+
 /* Container for the login form */
 .login-container {
-    
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
-    opacity: 0.9;}
-  
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+  opacity: 0.9;
+}
 
-  
-  /* Form elets */
+/* Form elements */
+.login-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+  opacity: 0.8; /* Set the opacity for the header */
+}
+
+.login-container input {
+  width: 80%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  outline: none;
+  opacity: 0.9; /* Set the opacity for the input fields */
+}
+
+.login-container button {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  opacity: 1; /* Reset the button's opacity to 1 */
+}
+
+.login-container button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Styles for Mobile */
+@media (max-width: 480px) {
+  .login-container {
+      max-width: 90%; /* Adjust the container width as needed for mobile screens */
+  }
+
   .login-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
-    opacity: 0.8; /* Set the opacity for the header */
+      font-size: 20px; /* Adjust font size for mobile screens */
   }
-  
-  .login-container input {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    outline: none;
-    opacity: 0.9; /* Set the opacity for the input fields */
+}
+
+/* Responsive Styles for Tablet */
+@media (max-width: 768px) {
+  .login-container {
+      max-width: 70%; /* Adjust the container width as needed for tablet screens */
   }
-  
-  .login-container button {
-    background-color: #007bff;
-    color: #fff;
-    border: none;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s ease;
-    opacity: 1; /* Reset the button's opacity to 1 */
+
+  .login-container h2 {
+      font-size: 22px; /* Adjust font size for tablet screens */
   }
-  
-  .login-container button:hover {
-    background-color: #0056b3;
-  }
-  
+}
