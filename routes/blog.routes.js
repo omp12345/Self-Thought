@@ -17,6 +17,16 @@ BlogRouter.get('/blogs', authenticateUser, async (req, res) => {
     res.status(500).json({ message: 'Failed to fetch blogs' });
   }
 });
+BlogRouter.get('/blogs/:id', authenticateUser, async (req, res) => {
+  const {id}=req.params
+  try {
+    const blogs = await Blog.findById({_id:id});
+    
+    res.status(200).json(blogs);
+  } catch (error) {
+    res.status(500).json({ message: 'Failed to fetch blogs' });
+  }
+});
 
 
 BlogRouter.post('/blogs', authenticateUser, async (req, res) => {

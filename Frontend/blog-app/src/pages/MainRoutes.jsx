@@ -21,6 +21,7 @@ function MainRoutes() {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/showblog' element={<Blogdata/>}></Route>
         <Route path='/edit/:id' element={<Edit/>}></Route>
+        <Route path='/' element={<Registration/>}></Route>
 
     </Routes>
   )
