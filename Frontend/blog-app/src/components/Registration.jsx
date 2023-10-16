@@ -25,10 +25,10 @@ function Registration() {
     // Check if the form data is empty
     if (!formData.username || !formData.email || !formData.password) {
       // Navigate to the error page
-      navigate("/error") // Replace "/error" with the actual path to your error page
+      navigate("/error") 
     } else {
-      // Form data is not empty, proceed with the API request
-      axios.post("http://localhost:8080/api/register", formData)
+     
+      axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/register", formData)
         .then((res) => {
           console.log(res.data);
           setalrt(res.data.message);

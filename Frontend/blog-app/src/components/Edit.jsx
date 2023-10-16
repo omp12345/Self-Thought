@@ -25,7 +25,7 @@ function Edit() {
       };
 
       const response = await axios.get(
-        `http://localhost:8080/api/blogs/${id}`,
+        `https://good-jade-shrimp-wrap.cyclic.app/api/blogs/${id}`,
         {
           headers: headers,
         }
@@ -51,7 +51,7 @@ function Edit() {
       };
 
       const response = await axios.patch(
-        `http://localhost:8080/api/blogs/${id}`,
+        `https://good-jade-shrimp-wrap.cyclic.app/api/blogs/${id}`,
         editedBlog,
         {
           headers: headers,

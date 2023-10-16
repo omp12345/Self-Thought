@@ -18,7 +18,7 @@ function Blogdata() {
         Authorization: `Bearer ${token}`,
       };
 
-      const response = await axios.get("http://localhost:8080/api/blogs", {
+      const response = await axios.get("https://good-jade-shrimp-wrap.cyclic.app/api/blogs", {
         headers: headers,
       });
 
@@ -36,7 +36,7 @@ function Blogdata() {
       };
 
       const response = await axios
-        .delete(`http://localhost:8080/api/blogs/${id}`, {
+        .delete(`https://good-jade-shrimp-wrap.cyclic.app/api/blogs/${id}`, {
           headers: headers,
         })
         .then((res) => {

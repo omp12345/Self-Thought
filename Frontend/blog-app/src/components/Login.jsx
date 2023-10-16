@@ -21,7 +21,7 @@ let obj={
         Navigate("/error") 
       } else {
         
-        axios.post("http://localhost:8080/api/login", obj)
+        axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/login", obj)
           .then((res) => {
             
             const token=res.data.token

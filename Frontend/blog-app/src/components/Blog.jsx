@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Blog.css'; // Import your CSS file for styling
+import './Blog.css'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Blogdata from './Blogdata';
@@ -9,8 +9,8 @@ function Blog() {
     image: '',
     note: '',
   });
-  const [addedBlogs, setAddedBlogs] = useState([]); // State to store added blogs
-  const [isBlogDataVisible, setIsBlogDataVisible] = useState(false); // State to control blog data visibility
+  const [addedBlogs, setAddedBlogs] = useState([]); 
+  const [isBlogDataVisible, setIsBlogDataVisible] = useState(false); 
 
   const navigate = useNavigate();
   const handelshow=()=>{
@@ -30,17 +30,16 @@ function Blog() {
         Authorization: `Bearer ${token}`,
       };
 
-      const response = await axios.post('http://localhost:8080/api/blogs', data, {
+      const response = await axios.post('https://good-jade-shrimp-wrap.cyclic.app/api/blogs', data, {
         headers: headers,
       });
 
-      // Add the newly created blog to the list of added blogs
+     
       setAddedBlogs([...addedBlogs, data]);
 
-      // Clear the input fields after adding the blog
       setData({ image: '', note: '' });
 
-      // Show the added blogs
+     
       setIsBlogDataVisible(true);
     } catch (error) {
       console.error('Error:', error);
@@ -49,10 +48,7 @@ function Blog() {
   };
  ;
   
-        // Clear the input fields after adding the blog
-      
-  
-        // Show the added blogs
+       
     
 
   return (

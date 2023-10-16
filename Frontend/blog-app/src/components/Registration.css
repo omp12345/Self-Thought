@@ -1,116 +1,121 @@
 /* Registration.css */
 body {
-  
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center center;
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    animation: moveBackground 20s linear infinite;
-  }
-  .main{
-    background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg');
-    
-  }
-  /* Reg/* Registration.module.css */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  animation: moveBackground 20s linear infinite;
+}
+
+.main {
+  background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg');
+}
+
+/* Registration.module.css */
 .registration-container {
-    background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg');
-    background-color: rgba(255, 255, 255, 0.5);
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    max-width: 300px;
-    width: 100%;
-    text-align: center;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    color: rgb(255, 255, 255);
-    opacity: 0.5;
-    
-  }
-  
-  .registration-container h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .registration-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .registration-container label {
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .registration-container input {
-    padding: 8px;
-    margin: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%; /* Set input width to 100% for full width */
-    font-size: 16px;
-  }
-  
-  .registration-container input:focus {
-    border-color: #007bff;
-    outline: none;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
-  }
-  
-  /* Reduce the width of the input fields */
+  background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg');
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  max-width: 300px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  color: rgb(255, 255, 255);
+  opacity: 0.5;
+}
+
+.registration-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.registration-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.registration-container label {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.registration-container input {
+  padding: 8px;
+  margin: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Set input width to 100% for full width */
+  font-size: 16px;
+}
+
+.registration-container input:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Reduce the width of the input fields for medium screens */
+@media (max-width: 768px) {
   .registration-container input[type="text"],
   .registration-container input[type="email"],
   .registration-container input[type="password"] {
-    width: 80%; /* Adjust the width as needed */
+      width: 80%;
   }
-  
-  .registration-container button {
-    padding: 10px 20px;
-    margin: 10px;
-    background-color:rgb(15, 17, 18);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  .registration-container button:hover {
-    background-color: #0056b3;
-  }
-  .registration-container::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg'); /* Replace with your image path */
-    background-size: cover;
-    animation: moveBackground 20s linear infinite; /* Adjust animation duration as needed */
-     /* Adjust background opacity */
-    z-index: -1; /* Place the background behind the container */
-  }
-  
+}
+
+.registration-container button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: rgb(15, 17, 18);
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.registration-container button:hover {
+  background-color: #0056b3;
+}
+
+.registration-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://scitechdaily.com/images/Universe-Astronomy-Art-Concept.jpg');
+  background-size: cover;
+  animation: moveBackground 20s linear infinite;
+  z-index: -1;
+}
+
 @keyframes moveBackground {
-    0% {
+  0% {
       background-position: 0 0;
-    }
-    100% {
-      background-position: 100% 100%;
-    }
   }
-  
-  
- /* Your existing styles for the registration container */
-/* ... */
+  100% {
+      background-position: 100% 100%;
+  }
+}
+
+/* Media query for medium-sized screens and tablets */
+@media (max-width: 768px) {
+  .registration-container {
+      max-width: 80%; /* Adjust the container width as needed */
+  }
+  /* Additional responsive styles for other elements can be added here */
+}
 
 /* Style the "Login" button */
 .login-button {
@@ -120,3 +125,4 @@ body {
 }
 
 /* Your existing styles for the "Register" button */
+/* ... */
