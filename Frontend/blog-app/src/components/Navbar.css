@@ -1,0 +1,55 @@
+/* Navbar.css */
+
+/* Reset default styles for lists */
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Set it at the top of the page */
+    left: 0; /* Align it to the left */
+    width: 100%; /* Make it 100% width of the page */
+    background-color: #333; /* Background color of the navbar */
+    overflow: hidden;
+  }
+  
+  /* Style the navigation links */
+  .navbar ul li {
+    float: left; /* Arrange links horizontally */
+  }
+  
+  .navbar a {
+    display: block; /* Make the whole link a clickable block */
+    color: white; /* Text color for links */
+    text-align: center; /* Center-align the text */
+    padding: 14px 16px; /* Add padding for spacing */
+    text-decoration: none; /* Remove underlines from links */
+  }
+  
+  /* Change link color on hover */
+  .navbar a:hover {
+    background-color: #555;
+  }
+  
+  /* Center the links horizontally */
+  .navbar ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Add some spacing between links */
+  .navbar li {
+    margin: 0 10px;
+  }
+  
+  /* Style the active link (current page) */
+  .navbar a.active {
+    background-color: #555;
+  }
+  
+  /* Add styles for the content of your individual pages (Login, Register, Blog) as needed */
+  

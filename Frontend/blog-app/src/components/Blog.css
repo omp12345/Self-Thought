@@ -25,27 +25,27 @@ h2 {
 /* Responsive Styles for Mobile */
 @media (max-width: 480px) {
   .blog-container {
-      padding: 10px; /* Reduce padding for mobile screens */
+    padding: 10px; /* Reduce padding for mobile screens */
   }
 
   input[type="text"] {
-      width: 80%; /* Adjust input width for mobile screens */
-      padding: 15px; /* Increase padding for height */
+    width: 80%; /* Adjust input width for mobile screens */
+    padding: 15px; /* Increase padding for height */
   }
 
   input[type="file"] + label {
-      padding: 15px 20px; /* Increase padding for height */
+    padding: 15px 20px; /* Increase padding for height */
   }
 
   .image-preview img {
-      transform: none; /* Remove the hover scaling effect on mobile */
+    transform: none; /* Remove the hover scaling effect on mobile */
   }
 }
 
 /* Responsive Styles for Tablet */
 @media (max-width: 768px) {
   input[type="text"] {
-      width: 90%; /* Adjust input width for tablet screens */
+    width: 90%; /* Adjust input width for tablet screens */
   }
 }
 
@@ -101,3 +101,39 @@ input[type="file"] + label:hover {
 .submit-button:hover {
   background-color: #1e1f20;
 }
+/* Blog.css */
+
+/* ... (Other styles as provided) ... */
+
+input[type="text"],
+input[type="file"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+input[type="file"] + label {
+  background-color: #88ac7d;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+input[type="file"] + label:hover {
+  background-color: #202223;
+}
+
+/* ... (Other styles as provided) ... */

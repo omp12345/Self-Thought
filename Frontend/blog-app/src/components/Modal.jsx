@@ -18,7 +18,7 @@ function Modal() {
   };
 
   const speakGoBack = () => {
-    speakMessage('Go back');
+    speakMessage('Something Went Wrong please login again');
   };
 
   useEffect(() => {

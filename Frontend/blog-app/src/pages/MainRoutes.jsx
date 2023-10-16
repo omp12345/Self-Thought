@@ -7,6 +7,7 @@ import Modal from '../components/Modal'
 import Blog from '../components/Blog'
 import Blogdata from '../components/Blogdata'
 import Edit from '../components/Edit'
+import UserBlog from '../components/UserBlog'
 
 
 function MainRoutes() {
@@ -21,7 +22,7 @@ function MainRoutes() {
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/showblog' element={<Blogdata/>}></Route>
         <Route path='/edit/:id' element={<Edit/>}></Route>
-        <Route path='/' element={<Registration/>}></Route>
+        <Route path='/' element={<UserBlog/>}></Route>
 
     </Routes>
   )

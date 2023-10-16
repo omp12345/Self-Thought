@@ -94,6 +94,46 @@
       padding: 8px 16px; /* Smaller buttons for mobile screens */
   }
 }
+/* Blogdata.css */
+
+/* ... (Other styles as provided) ... */
+
+/* Edit and Delete buttons */
+.blog-content button {
+  border: none;
+  margin: 5px 0;
+  cursor: pointer;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+.blog-content button.edit-button {
+  background-color: #0074d9;
+  color: #fff;
+  transition: background-color 0.2s ease;
+}
+
+.blog-content button.edit-button:hover {
+  background-color: #0056b3;
+}
+
+/* Fix the Delete button style */
+.blog-content button.delete-button {
+  background-color: #ff4136;
+  color: #fff;
+  transition: background-color 0.2s ease;
+  display: block;
+  width: 100%; /* Make it full-width within its container */
+  text-align: center; /* Center the text */
+  padding: 5px 10px; /* Adjust padding to make the button smaller */
+}
+
+.blog-content button.delete-button:hover {
+  background-color: #e33e36;
+}
+
+/* ... (Other styles as provided) ... */
+
 
 /* Responsive Styles for Tablet */
 @media (max-width: 768px) {

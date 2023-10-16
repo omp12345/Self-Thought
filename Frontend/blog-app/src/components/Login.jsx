@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import "./Login.css"
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import UserBlog from './UserBlog';
 
 
 
@@ -20,7 +21,7 @@ let obj={
        
         Navigate("/error") 
       } else {
-        
+        localStorage.setItem("email",email)
         axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/login", obj)
           .then((res) => {
             
@@ -70,6 +71,7 @@ Navigate('/register')
       <button className='login' onClick={handleLogin}>Login</button>
       <hr />
       <button onClick={handleclick}  style={{color:"black"}} className="register">Register</button>
+     
     </div>
     </div>
    
