@@ -10,6 +10,7 @@ import UserBlog from './UserBlog';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const[logindata,setLogindata]=useState("")
 const Navigate=useNavigate()
 
 let obj={
@@ -17,22 +18,24 @@ let obj={
     password
 }
   const handleLogin = () => {
-    if (!email || !password) {
+    if ((!email || !password)||email!==logindata.email||password!==logindata.password) {
        
-        Navigate("/error") 
+        // Navigate("/error") 
+        alert("Wrong Credetial")
       } else {
-        localStorage.setItem("email",email)
+        
         axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/login", obj)
           .then((res) => {
             
             const token=res.data.token
+            setLogindata(res.data.logindata)
             if(token){
                 localStorage.setItem("token",res.data.token)
                 Navigate("/blog")
               
             }
            
-          
+          alert("Login Succesfull")
            
           })
        

@@ -14,11 +14,11 @@ function Modal() {
   };
 
   const handleclick = () => {
-    navigate('/register');
+    navigate('/login');
   };
 
   const speakGoBack = () => {
-    speakMessage('Something Went Wrong please login again');
+    speakMessage('Something Went Wrong');
   };
 
   useEffect(() => {

@@ -25,7 +25,7 @@ function Registration() {
     // Check if the form data is empty
     if (!formData.username || !formData.email || !formData.password) {
       // Navigate to the error page
-      navigate("/error") 
+      alert("Please fill the input")
     } else {
      
       axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/register", formData)
