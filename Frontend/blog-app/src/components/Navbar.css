@@ -2,54 +2,73 @@
 
 /* Reset default styles for lists */
 ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  /* Style the navbar */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style the navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the navigation links */
+.navbar ul li {
+  float: left;
+}
+
+.navbar a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* Change link color on hover */
+.navbar a:hover {
+  background-color: #555;
+}
+
+/* Center the links horizontally */
+.navbar ul {
+  display: flex;
+  justify-content: center;
+}
+
+/* Add some spacing between links */
+.navbar li {
+  margin: 0 10px;
+}
+
+/* Style the active link (current page) */
+.navbar a.active {
+  background-color: #555;
+}
+
+/* Responsive design for mobile and tablet */
+@media (max-width: 768px) {
   .navbar {
-    position: fixed; /* Fix the navbar at the top */
-    top: 0; /* Set it at the top of the page */
-    left: 0; /* Align it to the left */
-    width: 100%; /* Make it 100% width of the page */
-    background-color: #333; /* Background color of the navbar */
-    overflow: hidden;
+      background-color: #333; /* Keep the background color for mobile */
+      position: static; /* Remove the fixed positioning for mobile */
   }
   
-  /* Style the navigation links */
-  .navbar ul li {
-    float: left; /* Arrange links horizontally */
-  }
-  
-  .navbar a {
-    display: block; /* Make the whole link a clickable block */
-    color: white; /* Text color for links */
-    text-align: center; /* Center-align the text */
-    padding: 14px 16px; /* Add padding for spacing */
-    text-decoration: none; /* Remove underlines from links */
-  }
-  
-  /* Change link color on hover */
-  .navbar a:hover {
-    background-color: #555;
-  }
-  
-  /* Center the links horizontally */
   .navbar ul {
-    display: flex;
-    justify-content: center;
+      flex-direction: column; /* Stack links vertically on small screens */
   }
-  
-  /* Add some spacing between links */
+
   .navbar li {
-    margin: 0 10px;
+      margin: 5px 0; /* Adjust spacing between links for small screens */
   }
-  
-  /* Style the active link (current page) */
-  .navbar a.active {
-    background-color: #555;
+
+  .navbar a {
+      padding: 10px 0; /* Adjust link padding for small screens */
   }
-  
-  /* Add styles for the content of your individual pages (Login, Register, Blog) as needed */
-  
+}
+
+/* Add styles for the content of your individual pages (Login, Register, Blog) as needed */
