@@ -42,7 +42,7 @@ function Blog() {
      
       setIsBlogDataVisible(true);
     } catch (error) {
-      console.error('Error:', error);
+      
       navigate('/error');
     }
   };

@@ -10,7 +10,10 @@ import UserBlog from './UserBlog';
 function Login() {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const[logindata,setLogindata]=useState("")
+  const[loginemail,setLoginemail]=useState(null)
+  const[loginpass,setLoginpass]=useState(null)
+ 
+  
 const Navigate=useNavigate()
 
 let obj={
@@ -18,7 +21,7 @@ let obj={
     password
 }
   const handleLogin = () => {
-    if ((!email || !password)||email!==logindata.email||password!==logindata.password) {
+    if ((!email || !password)||(email!=loginemail||password!=loginpass)) {
        
         // Navigate("/error") 
         alert("Wrong Credetial")
@@ -28,7 +31,11 @@ let obj={
           .then((res) => {
             
             const token=res.data.token
-            setLogindata(res.data.logindata)
+            const data=res.data.logindata
+console.log(data)
+setLoginemail(data.email)
+setLoginpass(data.password)
+           
             if(token){
                 localStorage.setItem("token",res.data.token)
                 Navigate("/blog")
