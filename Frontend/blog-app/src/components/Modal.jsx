@@ -42,7 +42,7 @@ function Modal() {
     <div>
       <button onClick={toggleModal} className="modal-button">
         <img
-          src="https://img.freepik.com/free-vector/oops-404-error-with-broken-robot-concept-illustration_114360-1932.jpg?size=626&ext=jpg&ga=GA1.1.1660271314.1697394009&semt=ais"
+          src="https://img.freepik.com/premium-vector/404-error-background-flat-style_23-2147763204.jpg?size=626&ext=jpg&ga=GA1.1.1660271314.1697394009&semt=ais"
           alt=""
         />
       </button>
