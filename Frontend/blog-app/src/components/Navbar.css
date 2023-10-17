@@ -21,6 +21,16 @@ ul {
 .navbar ul li {
   float: left;
 }
+.blog{
+  display: block;
+  color: rgb(13, 13, 13);
+  text-align: center;
+  padding: 14px 16px;
+  
+
+  margin-bottom: 15px;
+  border: none;
+}
 
 .navbar a {
   display: block;
@@ -51,24 +61,47 @@ ul {
   background-color: #555;
 }
 
+/* Style the Logout button */
+.navbar button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Change button color on hover */
+.navbar button:hover {
+  background-color: #c9302c;
+}
+
+/* Style the "Blog" button */
+.navbar .blog-button a {
+  background-color: #428bca;
+}
+
+/* Change "Blog" button color on hover */
+.navbar .blog-button a:hover {
+  background-color: #3071a9;
+}
+
 /* Responsive design for mobile and tablet */
 @media (max-width: 768px) {
   .navbar {
-      background-color: #333; /* Keep the background color for mobile */
-      position: static; /* Remove the fixed positioning for mobile */
+    background-color: #333;
+    position: static;
   }
-  
+
   .navbar ul {
-      flex-direction: column; /* Stack links vertically on small screens */
+    flex-direction: column;
   }
 
   .navbar li {
-      margin: 5px 0; /* Adjust spacing between links for small screens */
+    margin: 5px 0;
   }
 
   .navbar a {
-      padding: 10px 0; /* Adjust link padding for small screens */
+    padding: 10px 0;
   }
 }
-
-/* Add styles for the content of your individual pages (Login, Register, Blog) as needed */

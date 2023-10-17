@@ -18,7 +18,7 @@ function MainRoutes() {
 
         </Route>
         <Route path='/login' element={<Login/>}></Route>
-        <Route path='/error' element={<Modal/>}></Route>
+        <Route path='/*' element={<Modal/>}></Route>
         <Route path='/blog' element={<Blog/>}></Route>
         <Route path='/showblog' element={<Blogdata/>}></Route>
         <Route path='/edit/:id' element={<Edit/>}></Route>
