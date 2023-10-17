@@ -16,12 +16,18 @@ function Login() {
     password
   }
 
+  const isEmailValid = (email) => {
+    // Regular expression to validate email format
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailRegex.test(email);
+  }
+
   const handleLogin = () => {
     try {
       if (!email || !password) {
         setMessage('Please enter both email and password.');
         setMessageColor('red');
-      } else {
+      }  else {
         localStorage.setItem("email", email);
         axios.post("https://good-jade-shrimp-wrap.cyclic.app/api/login", obj)
           .then((res) => {
@@ -48,6 +54,20 @@ function Login() {
     Navigate('/register');
   }
 
+  const handlePasswordFocus = () => {
+    if (!isEmailValid(email)) {
+     setMessage("Email is not valid")
+
+    }else{
+      setMessage("")
+    }
+    
+  }
+  
+  
+  
+  
+
   return (
     <div className='main'>
       <div className="login-container">
@@ -56,6 +76,7 @@ function Login() {
           type="email"
           placeholder="Email"
           value={email}
+         
           onChange={(e) => setEmail(e.target.value)}
         />
         <input
@@ -63,6 +84,7 @@ function Login() {
           placeholder="Password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
+          onFocus={handlePasswordFocus} // Add this line
         />
         <button className='login' onClick={handleLogin}>Login</button>
         <p style={{ color: messageColor }}>{message}</p>
