@@ -87,6 +87,7 @@ body {
   background-color: #0056b3;
 }
 
+
 .registration-container::before {
   content: "";
   position: absolute;
