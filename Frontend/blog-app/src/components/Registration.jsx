@@ -72,12 +72,15 @@ function Registration() {
 
 
   return (
-    <div className='main'>
+   
       <div className="registration-container">
-        <h2>Register</h2>
+     
+    
         <form onSubmit={handleSubmit}>
-          <div>
+        <h2 >Register Form</h2>
+          <div >
             <label htmlFor="username">Username:</label>
+            <br />
             <input
               type="text"
               id="username"
@@ -90,6 +93,7 @@ function Registration() {
           </div>
           <div>
             <label htmlFor="email">Email:</label>
+            <br />
             <input
               type="email"
               id="email"
@@ -99,9 +103,11 @@ function Registration() {
               placeholder='email'
              
             />
+
           </div>
           <div>
             <label htmlFor="password">Password:</label>
+            <br />
             <input
               type="password"
               id="password"
@@ -114,11 +120,13 @@ function Registration() {
           {blankFieldMsg && <p style={{ color: 'smoke' }}>{blankFieldMsg}</p>}
           {invalidEmailMsg && <p style={{ color: 'red' }}>{invalidEmailMsg}</p>}
           {alrt && <p>{alrt}</p>}
+          <div className='om'>
           <button type="submit">Register</button>
           <button onClick={handleclick} style={{"color": 'teal'}} type="submit" className="login-button">Login</button>
+          </div>
         </form>
       </div>
-    </div>
+   
   );
 }
 

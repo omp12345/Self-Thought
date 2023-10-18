@@ -52,13 +52,13 @@ function Blogdata() {
   };
 
   return (
-    <div className="hii">
+    <div>
       <div className="blog-data-container">
         {data.map((blog, index) => (
           <div key={index} className="blog-item">
             <div className="blog-content">
               <h3>{blog.note}</h3>
-              <img src={blog.image} alt={blog.image} />
+              {/* Image removed from here */}
               <button
                 onClick={() => {
                   handleedit(blog._id);

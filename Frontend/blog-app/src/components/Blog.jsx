@@ -1,27 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './Blog.css'; 
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import Blogdata from './Blogdata';
 
 function Blog() {
- const [data, setData] = useState({
-    image: '',
-    note: '',
-  });
-  const [addedBlogs, setAddedBlogs] = useState([]); 
-  const [isBlogDataVisible, setIsBlogDataVisible] = useState(false); 
+  const [data, setData] = useState({ note: '' });
+  const [addedBlogs, setAddedBlogs] = useState([]);
+  const [isBlogDataVisible, setIsBlogDataVisible] = useState(false);
 
   const navigate = useNavigate();
-  const handelshow=()=>{
-    navigate("/showblog")
+
+  const handleShow = () => {
+    navigate("/showblog");
   }
 
-  const handlechange = (e) => {
+  const handleChange = (e) => {
     const { name, value } = e.target;
     setData({ ...data, [name]: value });
-  };
-  console.log(data);
+  }
 
   const handleSubmit = async () => {
     try {
@@ -34,59 +31,37 @@ function Blog() {
         headers: headers,
       });
 
-     
       setAddedBlogs([...addedBlogs, data]);
-
-      setData({ image: '', note: '' });
-
-     
+      setData({ note: '' });
       setIsBlogDataVisible(true);
     } catch (error) {
-      
       navigate('/error');
     }
-  };
- ;
-  
-       
-    
+  }
 
   return (
-    <div className='blog'>
-    <div className="blog-container">
-      <h2>Create a Blog Post</h2>
-      <div className="input-container">
-        <label htmlFor="text">Note:</label>
-        <input
-          type="text"
-          id="text"
-          value={data.note}
-          name="note"
-          onChange={handlechange}
-          placeholder='write your content'
-        />
+    <div >
+      <div className="blog-container">
+        <h2>Create a Blog Post</h2>
+        <div className="input-container">
+          <label htmlFor="note">Note:</label>
+          <input
+            type="text"
+            id="note"
+            value={data.note}
+            name="note"
+            onChange={handleChange}
+            placeholder='Write your content'
+          />
+        </div>
+        <button onClick={handleSubmit} className="submit-button">
+          Add Blog
+        </button>
+        <hr />
+        <div className="blog-content-container">
+          <Blogdata/>
+        </div>
       </div>
-      <div className="input-container">
-        <label htmlFor="image">Image:</label>
-        <input
-          type="text"
-          value={data.image}
-          id="image"
-          name="image"
-          onChange={handlechange}
-          placeholder='optional'
-        />
-      </div>
-
-      <button onClick={handleSubmit} className="submit-button">
-        Add Blog
-      </button>
-      <hr />
-      <button onClick={handelshow} className="submit-button">Show Your Blog</button>
-      
-
-     
-    </div>
     </div>
   );
 }
