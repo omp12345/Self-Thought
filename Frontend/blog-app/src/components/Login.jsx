@@ -69,7 +69,7 @@ function Login() {
   
 
   return (
-    <div className='main'>
+   
       <div className="login-container">
         <h2>Login</h2>
         <input
@@ -91,7 +91,7 @@ function Login() {
         <hr />
         <button onClick={handleclick} style={{ color: "black" }} className="register">Register</button>
       </div>
-    </div>
+   
   );
 }
 
