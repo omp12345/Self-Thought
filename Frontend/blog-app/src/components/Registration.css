@@ -57,7 +57,9 @@ padding-left: 2px;
     max-width: 100%;
   }
   .registration-container form  input{
+    background-color: transparent ;
     max-width: 80%;
+   
   }
   .registration-container form  label{
     max-width: 80%;
@@ -68,6 +70,7 @@ padding-left: 2px;
   }
   .registration-container form  h2{
     max-width: 100%;
+    color:rgb(50, 50, 64)
   }
   .om{
     width: 100%;
@@ -83,7 +86,8 @@ padding-left: 2px;
     display: block;
     max-width:50%;
     margin-right: 20px;
-    opacity: 0.4;
+    
+    color: rgb(128, 83, 0);
     
   }
 }

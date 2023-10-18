@@ -117,7 +117,7 @@ function Registration() {
               placeholder='password'
             />
           </div>
-          {blankFieldMsg && <p style={{ color: 'smoke' }}>{blankFieldMsg}</p>}
+          {blankFieldMsg && <p style={{ color: 'red' }}>{blankFieldMsg}</p>}
           {invalidEmailMsg && <p style={{ color: 'red' }}>{invalidEmailMsg}</p>}
           {alrt && <p>{alrt}</p>}
           <div className='om'>
